@@ -38,7 +38,7 @@ jobs:
         run: |
           export MACOSX_DEPLOYMENT_TARGET=10.15;
           export PATH="$(brew --prefix)/opt/gettext/bin:$(brew --prefix)/opt/gnu-getopt/bin:$(brew --prefix)/opt/bison/bin:$(brew --prefix)/opt/grep/libexec/gnubin:${PATH}";
-          ./kodev release android
+          ANDROID_ARCH=arm64 ./kodev build android 
 
       - name: Uploading artifacts
         uses: actions/upload-artifact@v3
