@@ -38,10 +38,10 @@ jobs:
         run: |
           export MACOSX_DEPLOYMENT_TARGET=10.15;
           export PATH="$(brew --prefix)/opt/gettext/bin:$(brew --prefix)/opt/gnu-getopt/bin:$(brew --prefix)/opt/bison/bin:$(brew --prefix)/opt/grep/libexec/gnubin:${PATH}";
-          ./kodev release macos
+          ./kodev release android
 
       - name: Uploading artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: koreader-macos
+          name: koreader-android
           path: '*.7z'
